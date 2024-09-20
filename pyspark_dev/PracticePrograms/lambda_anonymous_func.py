@@ -11,3 +11,10 @@ print("Cube: ", cube(3))
 sum = lambda a,b : a+b
 print("Sum:", sum(7,7))
 
+#Map Functions
+
+
+
+
+#Filter Function
+
