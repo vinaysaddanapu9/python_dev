@@ -23,7 +23,7 @@ df = spark.createDataFrame(data, schema)
 
 #Remove duplicates using distinct
 distinct_df = df.distinct()
-#distinct_df.show()
+distinct_df.show()
 
 #Remove duplicate rows based on specific columns(Name, Salary)
 drop_duplicates_df = df.dropDuplicates(["Name", "Salary"])
