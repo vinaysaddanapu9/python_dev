@@ -8,6 +8,10 @@ spark = SparkSession.builder\
         .master("local[*]")\
         .getOrCreate()
 
+log4jLogger = spark._jvm.org.apache.log4j
+log4jLogger.LogManager.getLogger("org").setLevel(log4jLogger.Level.OFF)
+log4jLogger.LogManager.getLogger("akka").setLevel(log4jLogger.Level.OFF)
+
 #Perform Right Join
 orders_data = [
         (1,101,"Delivered"),
